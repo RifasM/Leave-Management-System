@@ -22,15 +22,6 @@ SET time_zone = "+00:00";
 -- Database: `elms`
 --
 
-DELIMITER $$
---
--- Procedures
---
-CREATE DEFINER=`root`@`localhost` PROCEDURE `list` (IN `peid` INT)  NO SQL
-SELECT LeaveType,ToDate,FromDate,Description,PostingDate,AdminRemarkDate,AdminRemark,Status from tblleaves where empid=peid$$
-
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --

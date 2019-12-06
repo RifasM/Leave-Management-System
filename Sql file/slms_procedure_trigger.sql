@@ -12,6 +12,16 @@
 --
 -- Dumping routines for database 'slms'
 --
+
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `auto` BEFORE INSERT ON `tblstudents` FOR EACH ROW BEGIN
+
+SET NEW.City = "Bangalore";
+
+SET NEW.Country = "India";
+
+END */;;
+DELIMITER ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
